@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <script src="script.js"></script>
+    <div class="container">
+        <div class="box">
+        <div id="ans">Answer</div>
+        <div class="input">
+         <input type="number" id="num1">
+    <input type="number" id="num2"></div>
+    <div class="one">
+        <div class="item"><button>1</button></div>
+        <div class="item"><button>2</button></div>
+        <div class="item"><button>3</button></div>
+        <div class="item"><button>4</button></div>
+        <div class="item"><button>5</button></div>
+        <div class="item"><button>6</button></div>
+        <div class="item"><button>7</button></div>
+        <div class="item"><button>8</button></div>
+        <div class="item"><button>9</button></div>
+        <div class="item"><button>0</button></div>
+        <div class="item"><button>=</button></div>
+        <div class="item"><button>back</button></div>
+        </div>
+    <div class="button">
+    <ul>
+    <li><button id="sum">+</button></li>
+    <li><button id="sub">-</button></li>
+    <li><button id="multi">*</button></li>
+    <li><button id="dev">/</button></li>
+    <li><button id="mod">%</button></li>
+</ul>
+</div>
+</div>
+ </div>
+<script>
+let num1=document.getElementById("num1");
+let num2=document.getElementById("num2");
+let sum=document.getElementById("sum");
+let sub=document.getElementById("sub");
+let multi=document.getElementById("multi");
+let dev=document.getElementById("dev");
+let mod=document.getElementById("mod");
+let ans=document.getElementById("ans");
+let item=document.getElementsByClassName("item")
+function fun_add()
+ {
+    let result=parseInt(num1.value)+parseInt(num2.value);
+    ans.innerText=result;
+}
+function fun_sub()
+ {
+    let result=parseInt(num1.value)-parseInt(num2.value);
+    ans.innerText=result;
+}
+function fun_multi()
+ {
+    let result=parseInt(num1.value)*parseInt(num2.value);
+    ans.innerText=result;
+}
+function fun_dev()
+ {
+    let result=parseInt(num1.value)/parseInt(num2.value);
+    ans.innerText=result;
+}
+function fun_mod()
+ {
+    let result=parseInt(num1.value)%parseInt(num2.value);
+    ans.innerText=result;
+}
+sum.onclick=fun_add;
+sub.onclick=fun_sub;
+multi.onclick=fun_multi;
+dev.onclick=fun_dev;
+mod.onclick=fun_mod;
+</script>
+</body>
+</html>
