@@ -39,6 +39,46 @@
 </div>
 </div>
  </div>
-<script src="script.js"></script>
+<script>
+let num1=document.getElementById("num1");
+let num2=document.getElementById("num2");
+let sum=document.getElementById("sum");
+let sub=document.getElementById("sub");
+let multi=document.getElementById("multi");
+let dev=document.getElementById("dev");
+let mod=document.getElementById("mod");
+let ans=document.getElementById("ans");
+let item=document.getElementsByClassName("item")
+function fun_add()
+ {
+    let result=parseInt(num1.value)+parseInt(num2.value);
+    ans.innerText=result;
+}
+function fun_sub()
+ {
+    let result=parseInt(num1.value)-parseInt(num2.value);
+    ans.innerText=result;
+}
+function fun_multi()
+ {
+    let result=parseInt(num1.value)*parseInt(num2.value);
+    ans.innerText=result;
+}
+function fun_dev()
+ {
+    let result=parseInt(num1.value)/parseInt(num2.value);
+    ans.innerText=result;
+}
+function fun_mod()
+ {
+    let result=parseInt(num1.value)%parseInt(num2.value);
+    ans.innerText=result;
+}
+sum.onclick=fun_add;
+sub.onclick=fun_sub;
+multi.onclick=fun_multi;
+dev.onclick=fun_dev;
+mod.onclick=fun_mod;
+</script>
 </body>
 </html>
